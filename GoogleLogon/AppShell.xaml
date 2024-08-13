@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GoogleLogon.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GoogleLogon"
+    xmlns:Pages="clr-namespace:GoogleLogon.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="GoogleLogon">
+
+    <FlyoutItem>
+        <ShellContent
+            Title="Sign In"
+            ContentTemplate="{DataTemplate  Pages:SignIn}"
+            Route="SignIn" />
+
+        <ShellContent
+            Title="Sign Up"
+            ContentTemplate="{DataTemplate Pages:SignUp}"
+            Route="SignUp" />
+
+        <!--<ShellContent
+            Title="Complete"
+            Icon="checked.png"
+            ContentTemplate="{DataTemplate local:ProfilePage}"
+            FlyoutItemIsVisible="False"
+            Route="ProfilePage" />-->
+    </FlyoutItem>
+
+</Shell>
