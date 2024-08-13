@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoogleLogon.Pages.SignIn"
+             Title="Sign In"
+             BackgroundColor="#f1f1f1">
+
+    <Grid RowDefinitions="*,Auto">
+
+
+        <VerticalStackLayout Grid.Row="0">
+
+            <!--Text Logo-->
+            <Label  
+                BackgroundColor="Blue" 
+                Text="SignIn" 
+                FontSize="120" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center" 
+                TextColor="#f1f"
+            />
+            <Editor 
+                Margin="15,10,15,0"
+                FontSize="20"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Enter your Email: " 
+                BackgroundColor="Yellow"
+            />
+
+
+
+            <Entry 
+                Margin="15,10,15,0"
+                FontSize="18"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                IsPassword="True" 
+                Placeholder="Enter you are Pasword: "
+            />
+
+            <Grid Margin="15,0,15,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox Grid.Column="0" Color="#f1f" />
+
+                <Label Grid.Column="1" VerticalTextAlignment="Center" Text="Remember me" />
+
+                <Label Grid.Column="2" VerticalTextAlignment="Center" Text="Forgot password?"/>
+            </Grid>
+
+
+
+            <Button 
+                    Margin="15,10,15,0"
+                    CornerRadius="30" 
+                    Text="Sign In" 
+                    BackgroundColor="Blue"
+            />
+
+            <Button    
+                    Margin="15,10,15,0"
+                    CornerRadius="30" 
+                    Text="Send a magic link" 
+                    BackgroundColor="Red"
+            />
+
+
+            <Grid ColumnSpacing="10" Margin="15,20,15,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Column="0"  BackgroundColor="Red" HeightRequest="1"/>
+                <Label Grid.Column="1" Text="OR"/>
+                <BoxView Grid.Column="2" BackgroundColor="Red" HeightRequest="1"/>
+            </Grid>
+
+
+            <Grid Margin="15,0,15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--ImageSource=""-->
+                <Button Grid.Column="0"  CornerRadius="15" VerticalOptions="Center" HorizontalOptions="Center" Text="FaceBook"/>
+                <!--ImageSource=""-->
+                <Button Grid.Column="1"   CornerRadius="15" VerticalOptions="Center" HorizontalOptions="Center" Text="Google"/>
+            </Grid>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1">
+
+
+            <Grid Margin="15,0,15,10" ColumnSpacing="3" HorizontalOptions="Center" VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Grid.Column="0"
+                    TextColor="#f1f"
+                    Text="SignUp"
+                    VerticalOptions="End" 
+                    HorizontalOptions="CenterAndExpand" >
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                      CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Grid.Column="1" Text="for New Account"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
